@@ -1,0 +1,91 @@
+:root {
+  --primary-color: #050505;
+  --secondary-color: #7e7e7e;
+  --third-color: #c3ff3d;
+  --fourth-color: #ff9960;
+  --fifth-color: #255770;
+  --sixth-color: #ffffff;
+  --seventh-color: #b5d2f1;
+  --eighth-color: #e59bf0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  color: var(--primary-color);
+}
+body {
+  padding: 50px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -5rem;
+  text-align: center;
+  font-size: 400;
+}
+.logo {
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+nav ul,
+header div ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 4.5rem;
+  font-size: 16px;
+  margin-top: -1rem;
+}
+nav ul {
+  background-color: #f2f2f2;
+  padding: 12px 18px;
+  border-radius: 25px;
+}
+header div ul {
+  gap: 3rem;
+}
+nav ul li a,
+header div ul li a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header div ul li.log-in a {
+  padding: 10px 18px;
+  border-radius: 25px;
+  border: 1px solid var(--secondary-color);
+  background: transparent;
+  /* transition:
+    background 0.18s ease,
+    color 0.18s ease,
+    transform 0.08s ease; */
+}
+
+/* header div ul li.log-in a:hover {
+  background: var(--fifth-color);
+  color: var(--sixth-color);
+  transform: translateY(-1px);
+} */
+
+header div ul li.sign-up a {
+  padding: 10px 18px;
+  border-radius: 25px;
+  background: var(--primary-color);
+  color: var(--sixth-color);
+  text-decoration: none;
+  border: none;
+  transition:
+    opacity 0.12s ease,
+    transform 0.08s ease;
+}
+
+header div ul li.sign-up a:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
