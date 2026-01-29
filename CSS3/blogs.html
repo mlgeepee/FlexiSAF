@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Sign Up For Blog Posts</title>
+  </head>
+  <body>
+    <div class="blog-header">
+      <h3>Sign Up For Our Blog Posts</h3>
+      <p>Subscribe to our blog to get the latest news</p>
+    </div>
+    <div class="blog-form">
+      <form action="https://formspree.io/f/xgokzvrg" method="POST">
+        <label>
+          Email:
+          <input type="email" name="email" required /><br />
+        </label>
+        <label>
+          First name:
+          <input type="text" name="fname" required /><br />
+        </label>
+        <label>
+          Last name:
+          <input type="text" name="lname" required /><br />
+        </label>
+        <label>
+          Address:
+          <input type="text" name="address" required /><br />
+        </label>
+        <label>
+          Country:
+          <input type="text" name="country" required /><br />
+        </label>
+        <label>
+          City:
+          <input type="text" name="city" required /><br />
+        </label>
+        <label>
+          Zip code:
+          <input type="text" name="zip" required /><br />
+        </label>
+
+        <label>
+          Phone number:
+          <input type="tel" name="phone" required /><br />
+        </label>
+        <label>
+          <input type="checkbox" name="subscribe" />
+          Subscribe to our newsletter </label
+        ><br /><br />
+        <label>
+          Your message:
+          <textarea name="message" required></textarea></label
+        ><br />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </body>
+</html>
