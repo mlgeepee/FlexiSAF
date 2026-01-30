@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>Introduction to HTML</title>
 </head>
 
@@ -28,11 +29,11 @@
     </div>
   </header>
   <main>
-  <section>
+  <section class="hero">
     <div class="subtitle">
-      <p>English Courses For Every Levels & Goals</p>
+      <p class="sub"><span class="icon"><i class="fa-solid fa-book"></i></span> English Courses For Every Levels & Goals</p>
       <h1 class="hero-text">
-        Learn <span>English</span> <span>Online</span> with Real Teachers.
+        Learn <span class="sp1">English</span> <span class="sp2">Online</span> with Real Teachers.
       </h1>
       <p class="hero-para">
         Improve your speaking, grammar, vocabulary and confidence with
@@ -40,12 +41,20 @@
         real-life situations.
       </p>
       <div class="hero-btn">
-        <button type="button">Start Learning for Free</button>
-        <button type="button">Explore the Method</button>
+        <button class="start" type="button">Start Learning for Free</button>
+        <button class="explore" type="button">Explore the Method</button>
+      </div>
+      <div class="students">
+        <div class="student-images">
+          <img class="student-image"  src="photos/img3.jpg" alt="student">
+          <img class="student-image" src="photos/img5.jpg" alt="student">
+          <img class="student-image" src="photos/img6.jpg" alt="student">
+        </div>
+        <p class="student-text">Join <span class="sp3">1M+</span> students world wide</p>
       </div>
     </div>
     <div class="hero-image">
-      <img width="360px" height="360px" src="photos/hero.jpg" alt="hero image" />
+      <img src="photos/hero.jpg" alt="Image of teacher" />
     </div>
   </section>
   <section>
