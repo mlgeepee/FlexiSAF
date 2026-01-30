@@ -1,11 +1,11 @@
 :root {
-  --primary-color: #050505;
+  --primary-color: #1e1e1e;
   --secondary-color: #7e7e7e;
-  --third-color: #c3ff3d;
+  --third-color: #b0e637;
   --fourth-color: #ff9960;
   --fifth-color: #255770;
   --sixth-color: #ffffff;
-  --seventh-color: #b5d2f1;
+  --seventh-color: #f0f6fc;
   --eighth-color: #e59bf0;
 }
 
@@ -16,7 +16,7 @@
   font-family: poppins, sans-serif;
   color: var(--primary-color);
 }
-body {
+.body-fill {
   padding: 0px 70px;
 }
 /* Header */
@@ -41,6 +41,9 @@ header div ul {
   gap: 4.5rem;
   font-size: 16px;
   margin-top: -1rem;
+}
+header div ul {
+  gap: 1.5rem !important;
 }
 nav ul {
   gap: 1.5rem;
@@ -79,11 +82,6 @@ nav ul li.active a {
   color: var(--sixth-color);
   box-shadow: 0 6px 14px rgba(37, 87, 112, 0.12);
 }
-
-/* nav ul li a {
-    padding: 6px 10px;
-    font-size: 14px;
-  } */
 
 header div ul {
   gap: 3rem;
@@ -150,6 +148,7 @@ header div ul li.sign-up a:hover {
   background-color: var(--third-color);
   box-sizing: border-box;
   font-size: 16px;
+  margin-right: 5px;
 }
 .hero-text {
   font-size: 50px;
@@ -182,6 +181,7 @@ header div ul li.sign-up a:hover {
   border-radius: 25px;
   cursor: pointer;
   margin-bottom: 2rem;
+  font-size: 14px;
   transition:
     opacity 0.12s ease,
     transform 0.08s ease;
@@ -191,6 +191,7 @@ header div ul li.sign-up a:hover {
   background: var(--primary-color);
   color: var(--sixth-color);
   border: none;
+  margin-right: 1.3rem;
 }
 .explore {
   background: transparent;
@@ -235,4 +236,100 @@ header div ul li.sign-up a:hover {
   color: var(--fourth-color);
   font-weight: 700;
   font-size: x-large;
+}
+
+/* Section Intro */
+.how-it-works {
+  background-color: var(--seventh-color);
+  padding-bottom: 9rem;
+}
+.section-intro {
+  text-align: center;
+  margin-top: 7rem;
+  padding-top: 9rem;
+}
+
+.section-intro .sub.center {
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  max-width: 600px;
+  line-height: 1.2;
+  margin: 0 auto;
+}
+.subtitle-para {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+.card-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.card {
+  border-radius: 15px;
+  width: 300px;
+  height: 350px;
+  background-color: var(--sixth-color);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  background-color: var(--third-color);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card:hover .card-text {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+.card:hover button {
+  background-color: var(--primary-color);
+  color: var(--sixth-color);
+  border: none;
+}
+.card img {
+  display: block;
+  border-radius: 15px;
+  width: 100%;
+  height: 50%;
+}
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+.card-text {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  line-height: 1.5;
+  padding: 0 1rem;
+}
+.card button {
+  align-items: center;
+  width: 90%;
+  margin: 1.5rem 1rem 0 1rem;
+  padding: 10px 15px;
+  border: 1px solid var(--primary-color);
+  border-radius: 25px;
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    opacity 0.12s ease,
+    transform 0.3s ease;
 }
