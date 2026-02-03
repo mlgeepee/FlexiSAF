@@ -398,3 +398,93 @@ header div ul li.sign-up a:hover {
   background-color: var(--primary-color);
   color: var(--sixth-color);
 }
+
+/* Button grid (checkbox options) */
+.btn-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.2rem;
+}
+.btn-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.btn-grid .chk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--primary-color);
+}
+.btn-grid .chk input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: var(--fifth-color);
+}
+
+@media (max-width: 740px) {
+  .btn-grid {
+    flex-direction: column;
+  }
+}
+
+/* Section Video */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 7rem;
+  padding: 9rem 0;
+  align-items: center;
+}
+
+/* Target actual <video> elements inside the grid so container divs aren't sized incorrectly */
+.video-grid video,
+.video-grid .video {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 9 / 9;
+  height: auto; /* preserve intrinsic ratio */
+  max-height: 500px; /* prevents the video from becoming too tall */
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+.span-teacher {
+  width: 40px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+  vertical-align: middle;
+}
+.left {
+  text-align: left;
+  margin: 0;
+  line-height: 1.5;
+}
+.card-board button {
+  width: 70%;
+  margin: 1.7rem 1rem 0 1rem;
+  padding: 8px;
+  margin: 2rem 0 2rem 0;
+}
+/* .btn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+} */
+
+@media (max-width: 740px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
