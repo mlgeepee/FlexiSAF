@@ -279,7 +279,179 @@ header div ul li.sign-up a:hover {
   justify-content: center;
   margin-top: 4rem;
 }
-.card {
+
+/* Pricing section styles */
+.pricing {
+  padding: 4rem 0 2rem;
+}
+.pricing .section-intro {
+  margin-bottom: 1.6rem;
+}
+.pricing .carousel {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.pricing .carousel .pill {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(37, 87, 112, 0.06);
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.12s ease,
+    color 0.12s ease,
+    transform 0.08s ease;
+}
+.pricing .carousel .pill.active {
+  background: var(--fifth-color);
+  color: var(--sixth-color);
+  transform: translateY(-2px);
+}
+
+.pricing .carousel .pill.active {
+  color: var(--sixth-color) !important;
+  box-shadow: 0 8px 24px rgba(37, 87, 112, 0.08);
+  transform: translateY(-2px);
+}
+
+.pricing .card-container {
+  gap: 1.2rem;
+  justify-content: center;
+}
+.pricing .card,
+.carding {
+  width: 320px;
+  /* min-height: 380px; */
+  border-radius: 14px;
+  padding: 1.2rem 1rem;
+  background: var(--sixth-color);
+  box-shadow: 0 10px 30px rgba(37, 87, 112, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pricing .carding .plan-tip {
+  display: inline-block;
+  background: linear-gradient(90deg, #ffd9a8, #ffb57a);
+  color: #3b2b00;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.pricing .plan-tag {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+.pricing .price-tag {
+  font-size: 20px;
+  margin-bottom: 0.6rem;
+}
+.pricing .price-tag .price {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+.price {
+  color: var(--secondary-color);
+}
+.pricing .plan-para {
+  color: var(--secondary-color);
+  margin: 1rem 0rem;
+}
+.background-fixed .plan-para {
+  margin: 1rem 0;
+}
+.pricing .card input[type="checkbox"] {
+  margin-right: 8px;
+}
+.pricing .carding label:not(.chk) {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--primary-color);
+}
+.pricing .carding .chk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem;
+  /* cursor: pointer; */
+  color: var(--primary-color);
+  font-size: 12px;
+}
+.pricing .carding .chk input[type="checkbox"] {
+  width: 18px;
+  height: 16px;
+  margin: 0;
+  padding: 10px;
+  accent-color: var(--fifth-color);
+}
+
+.pricing .carding .chk input[type="checkbox"]:checked {
+  accent-color: var(--fifth-color);
+}
+
+.pricing .carding .background-fixed {
+  background: var(--third-color);
+  color: var(--primary-color);
+  border-radius: 12px;
+  padding: 1rem;
+}
+.pricing .carding .background-fixed .plan-tag,
+.pricing .carding .background-fixed .price-tag .price,
+.pricing .carding .background-fixed .plan-para,
+.pricing .carding .background-fixed label {
+  color: var(--sixth-color);
+}
+.pricing .carding.background-fixed .plan-tip {
+  color: var(--primary-color);
+}
+
+.pricing .carding button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--sixth-color);
+  font-size: 12px;
+  cursor: pointer;
+}
+.pricing .carding button.space {
+  margin-top: 3.7rem;
+}
+.pricing .checks {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  margin-top: 2rem;
+  accent-color: var(--fifth-color);
+  align-items: center;
+  text-align: center;
+}
+.pricing .checks label {
+  display: inline-block;
+}
+
+@media (max-width: 860px) {
+  .pricing .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing .carding {
+    width: 92%;
+  }
+}
+
+.card,
+.carding {
   border-radius: 15px;
   width: 300px;
   height: 350px;
@@ -293,6 +465,9 @@ header div ul li.sign-up a:hover {
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
+}
+.card-container .card .no-hover:hover {
+  background-color: var(--sixth-color);
 }
 
 .card:hover .card-text {
@@ -475,16 +650,135 @@ header div ul li.sign-up a:hover {
   padding: 8px;
   margin: 2rem 0 2rem 0;
 }
-/* .btn-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-  margin-top: 2rem;
-  text-align: left;
-} */
 
 @media (max-width: 740px) {
   .video-grid {
     grid-template-columns: 1fr;
   }
+}
+.pricing {
+  padding-bottom: 9rem;
+}
+/* cta */
+.cta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  padding: 2rem;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-radius: 25px;
+}
+.cta .text {
+  color: var(--sixth-color);
+}
+.cta h2.section-title,
+.cta .subtitle-para {
+  margin: 0;
+  color: var(--sixth-color);
+}
+.cta h2.section-title {
+  margin: 1rem 0 0.5rem 0;
+  letter-spacing: 1px;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.cta .subtitle-para {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.cta .cta-btn {
+  width: 60%;
+  margin: 1.7rem 1rem 0 1rem;
+  padding: 10px;
+  background-color: var(--sixth-color);
+  border-color: var(--sixth-color);
+  font-size: 12px;
+  margin: 0;
+}
+.cta .cta-image {
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 3 / 9;
+  max-height: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 25px;
+  display: block;
+  margin: 0 auto;
+}
+/* footer */
+.footer {
+  display: grid;
+  grid-template-columns: 1.5fr 3fr;
+  gap: 3rem;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 9rem;
+  padding: 3rem;
+  align-items: center;
+  background-color: var(--seventh-color);
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+}
+.footer-logo-text {
+  align-items: start;
+  text-align: left;
+}
+.footer-logo {
+  width: 150px;
+  height: 150px;
+}
+.footer-text,
+.footer .copy {
+  color: var(--secondary-color);
+  width: 100%;
+}
+.footer-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-decoration: none;
+  text-align: left;
+}
+.footer-links h4 {
+  color: var(--primary-color);
+  font-size: 16px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.footer-links li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.footer-links li a:hover {
+  color: var(--fifth-color);
+  transition: color 0.12s ease;
+}
+.fa-facebook,
+.fa-twitter,
+.fa-instagram {
+  margin-right: 10px;
+  font-size: 18px;
+  color: var(--primary-color);
+}
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-instagram:hover {
+  color: var(--fifth-color);
+  transition: color 0.12s ease;
 }
