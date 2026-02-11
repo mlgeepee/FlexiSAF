@@ -3,53 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="blog.css" />
     <link rel="stylesheet" href="styles.css" />
     <title>Sign Up For Blog Posts</title>
   </head>
   <body>
     <div class="blog-header">
       <h3>Sign Up For Our Blog Posts</h3>
-      <p>Subscribe to our blog to get the latest news</p>
+      <p>Subscribe to our blog to get the latest news and updates</p>
     </div>
     <div class="blog-form">
       <form action="https://formspree.io/f/xgokzvrg" method="POST">
         <label>
           Email:
-          <input type="email" name="email" required /><br />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            required
+          /><br />
         </label>
         <label>
           First name:
-          <input type="text" name="fname" required /><br />
+          <input
+            type="text"
+            name="fname"
+            placeholder="First Name"
+            required
+          /><br />
         </label>
         <label>
           Last name:
-          <input type="text" name="lname" required /><br />
+          <input
+            type="text"
+            name="lname"
+            placeholder="Last Name"
+            required
+          /><br />
         </label>
         <label>
           Address:
-          <input type="text" name="address" required /><br />
+          <input
+            type="text"
+            name="address"
+            placeholder="Home Address"
+            required
+          /><br />
         </label>
         <label>
           Country:
-          <input type="text" name="country" required /><br />
+          <input
+            type="text"
+            name="country"
+            placeholder="Your Country"
+            required
+          /><br />
         </label>
         <label>
           City:
-          <input type="text" name="city" required /><br />
+          <input
+            type="text"
+            name="city"
+            placeholder="Your City"
+            required
+          /><br />
         </label>
         <label>
           Zip code:
-          <input type="text" name="zip" required /><br />
+          <input type="text" name="zip" placeholder="Zip Code" required /><br />
         </label>
 
         <label>
           Phone number:
-          <input type="tel" name="phone" required /><br />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number"
+            required
+          /><br />
         </label>
-        <label>
+        <label class="checkbox">
           <input type="checkbox" name="subscribe" />
-          Subscribe to our newsletter </label
-        ><br /><br />
+          Subscribe for updates
+        </label>
+        <br /><br />
         <label>
           Your message:
           <textarea name="message" required></textarea></label
