@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="script.js" defer></script>
+  <title>Introduction to HTML</title>
+</head>
+
+<body>
+  <header>
+    <img class="logo" width="150px" height="120px" src="photos/logo.png" alt="School Logo" />
+    <button id="open-sidebar-button" title="open" class="hamburger" type="button" onclick="openSidebar()"
+      aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav id="navbar">
+      <ul>
+        <li>
+          <button id="close-sidebar-button" title="Close" class="close" type="button" onclick="closeSidebar()"
+            aria-label="close sidebar">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </li>
+        <li class="nav-link active"><a class="active-link" aria-current="page" href="home">Home</a></li>
+        <li class="nav-link"><a href="#courses">Courses</a></li>
+        <li class="nav-link"><a href="#pricing">Pricing</a></li>
+        <li class="nav-link"><a href="blogs.html">Blogs</a></li>
+        <li class="nav-link log-in"><a href="login">Log In</a></li>
+        <li class="nav-link sign-up"><a class="accent-link" href="signup">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+  </header>
+  <main>
+    <section class="hero body-fill">
+      <div class="subtitle">
+        <p class="sub"><span class="icon"><i class="fa-solid fa-book"></i></span>English Courses For Every Levels &
+          Goals</p>
+        <h1 class="hero-text">
+          Learn <span class="sp1">English</span> <span class="sp2">Online</span> with Real Teachers.
+        </h1>
+        <p class="hero-para">
+          Improve your speaking, grammar, vocabulary and confidence with
+          interactive lessons, live sessions and learning method based on
+          real-life situations.
+        </p>
+        <div class="hero-btn">
+          <button class="start" type="button">Start Learning for Free</button>
+          <button class="explore" type="button">Explore the Method</button>
+        </div>
+        <div class="students">
+          <div class="student-images">
+            <img class="student-image" src="photos/img3.jpg" alt="student">
+            <img class="student-image" src="photos/img5.jpg" alt="student">
+            <img class="student-image" src="photos/img6.jpg" alt="student">
+          </div>
+          <p class="student-text">Join <span class="sp3">1M+</span> students world wide</p>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="photos/hero-image.jpg" alt="Image of teacher teaching" />
+      </div>
+    </section>
+    <section class="how-it-works body-fill">
+      <div class="section-intro">
+        <p class="sub center"><span class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>How it Works</p>
+        <h2 class="section-title">A Simple and Smart Way to Learn English</h2>
+        <p class="subtitle-para">
+          Our method combines real-life videos, interactive exercises, and live
+          sessions with expert teachers support to give you immersive learning experience.
+        </p>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <img src="photos/img11.jpg" alt="real-life image" />
+          <h5 class="card-title">Learn from Real Situations</h5>
+          <p class="card-text">
+            Watch videos of real-life situations and conversations to learn how
+            English is used in everyday life.
+          </p>
+          <button class="button" n type="button">Watch Demo</button>
+        </div>
+        <div class="card card-pad">
+          <img src="photos/img7.jpg" alt="practice image" />
+          <h5 class="card-title">Practice What You Learn</h5>
+          <p class="card-text">
+            You can practice your speaking, listening, reading, and writing
+            skills with interactive exercises and quizzes.
+          </p>
+          <button class="button" type="button">Try a Practice Lesson</button>
+        </div>
+        <div class="card">
+          <img src="photos/img8.jpg" alt="teacher image" />
+          <h5 class="card-title">Learn with Live Teachers</h5>
+          <p class="card-text">
+            Our expert teachers are available for live sessions to help you
+            improve your skills and answer your questions.
+          </p>
+          <button class="button" type="button">See Teacher Sessions</button>
+        </div>
+        <div class="card">
+          <img src="photos/img2.jpg" alt="track image" />
+          <h5 class="card-title">Track Your Progress</h5>
+          <p class="card-text">
+            You can track your progress and see how much you have improved
+            with our personalized learning dashboard.
+          </p>
+          <button class="button" type="button">View Progress Tools</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="section-intro" id="courses">
+        <p class="sub center"><span class="icon"><i class="fa-solid fa-stairs"></i></span>Course Levels</p>
+        <h2 class="section-title">English Courses for Every Level</h2>
+        <p class="subtitle-para">
+          Whether you are a beginner or an advanced learner, we have courses
+          tailored to your level and goals.
+        </p>
+      </div>
+      <div class="card-container-grid">
+        <div class="card-grid">
+          <div class="card-grid-grids">
+            <p class="sub1 center"><span class="icon tag">A1</span>Beginner</p>
+            <p class="card-title position">
+              Build your foundation with essential vocabulary and simple phrases.
+            </p>
+            <img class="grid-image" src="photos/img3.jpg" alt="Real-life teaching" />
+            <button class="button black position1" type="button">Start A1</button>
+          </div>
+        </div>
+        <div class="card-grids">
+
+          <div>
+            <p class="sub1 center"><span class="icon tag">A2</span>Elementary</p>
+            <p class="card-text">
+              Understand everyday conversations and form basic sentences.
+            </p>
+            <button class="button position1" type="button">Start A2</button>
+          </div>
+          <div>
+            <p class="sub1 center"><span class="icon tag">B1</span>Intermediate</p>
+            <p class="card-text">
+              Improve fluency and communication clearly in real-life situations.
+            </p>
+            <button class="button position1" type="button">Start B1</button>
+          </div>
+
+
+          <div>
+            <p class="sub1 center"><span class="icon tag">B2</span>Upper Intermediate</p>
+            <p class="card-text">
+              Enhance accuracy, vocabulary and confidence in real-life situations.
+            </p>
+            <button class="button position1" type="button">Start B2</button>
+          </div>
+          <div>
+            <p class="sub1 center"><span class="icon tag">C1</span>Advanced</p>
+            <p class="card-text">
+              Speak like a native with strong grammar and articulation.
+            </p>
+            <button class="button position1" type="button">Start C1</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <section class="tag">
+      <div class="video-grid">
+        <div class="card-board">
+          <p class="sub"><span><span class="icon"><i class="fa-solid fa-chalkboard-user"></i></span>Live Teachers &
+              Classes</p>
+          <h2 class="section-title left">Learn Live with Certified and Qualified <img class="span-teacher"
+              src="photos/img15.jpg" alt="teacher icon">Teachers </h2>
+          <p class="subtitle-para left">
+            Join live group classes or get personal guidance from our expert teachers to practice speaking and gain
+            real-time feedback.
+          </p>
+          <button type="button" class="button black">Explore Live Classes</button>
+
+          <div class="btn-grid">
+            <div>
+              <label class="chk"><input type="checkbox" checked /> Daily live sessions</label>
+              <label class="chk"><input type="checkbox" checked /> Native-speaking teachers</label>
+              <label class="chk"><input type="checkbox" checked /> Small learning groups</label>
+            </div>
+            <div>
+              <label class="chk"><input type="checkbox" checked /> Sync across all devices</label>
+              <label class="chk"><input type="checkbox" checked /> Pronunciation-focused lessons</label>
+              <label class="chk"><input type="checkbox" checked /> Topic-based classes</label>
+            </div>
+          </div>
+        </div>
+        <div class="video">
+          <video autoplay muted loop class="video">
+            <source src="videos/teacher.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+    <section class="pricing body-fill">
+      <div class="section-intro" id="pricing">
+        <p class="sub center"><span class="icon"><i class="fa-solid fa-dollar-sign"></i></span>Pricing</p>
+        <h2 class="section-title">Choose The Plan That Works for You</h2>
+        <p class="subtitle-para">
+          Find the perfect plan for your learning goals flexible, affordable and designed to help you achieve your
+          language goals and stay consistent.
+        </p>
+      </div>
+      <div class="carousel">
+        <span class="pill">Monthly Plan</span>
+        <span class="pill active">Yearly Plan</span>
+        <span class="pill">Quarterly Plan</span>
+      </div>
+      <div class="pricing-container">
+        <div class="carding no-hover">
+          <div class="background">
+            <div class="card-lead">
+            <p class="plan-tag">Monthly Plan</p>
+            <p class="price-tag">
+              <span class="price">$49</span> /Year
+            </p>
+</div>
+            <p class="plan-para">
+              Unlock unlimited access to all our courses and materials.
+            </p>
+<div class="checks-container">
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              Switch or cancel anytime
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              No hidden fees
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              30-days money-back guarantee
+            </label>
+            </div>
+            <button class="space" type="button">Get Started</button>
+          </div>
+        </div>
+        <div class="carding no-hover">
+          <div class="background-fixed">
+            <p class="plan-tip">&starf; Most Popular &starf;</p>
+            <p class="plan-tag">Yearly Plan</p>
+            <p class="price-tag">
+              <span class="price">$70</span> /Year
+            </p>
+            <p class="plan-para">
+              Best price for long-term learners
+            </p>
+            <div class="checks-container">
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              All Course Levels
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              Access to Learning Materials
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              Monthly Live Sessions
+            </label>
+            </div>
+            <button type="button" class="space1">Get Started</button>
+          </div>
+        </div>
+        <div class="carding no-hover">
+          <div class="background">
+             <div class="card-lead">
+            <p class="plan-tag">Quarterly Plan</p>
+            <p class="price-tag">
+              <span class="price">
+                $65</span> /Year
+            </p>
+            </div>
+            <p class="plan-para">
+              Unlock unlimited access to all our courses and materials.
+            </p>
+            <div class="checks-container">
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              All Course Levels
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              Access to Learning Materials
+            </label>
+            <label class="chk">
+              <input type="checkbox" class="custom-checkbox" checked />
+              <span class="checkmark"></span>
+              Monthly Live Sessions
+            </label>
+            </div>
+            <button class="space" type="button">Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="checks">
+      </div>
+    </section>
+    <section>
+      <div class="cta">
+        <div class="card-board">
+          <p class="sub center text"><span class="icon"><i class="fa-solid fa-pen"></i></span>CTA</p>
+          <h2 class="section-title">Start Your English Journey Today</h2>
+          <p class="subtitle-para">
+            Join millions of learners improving their English with our proven, immersive method.
+          </p>
+          <button class="button cta-btn type=" button">Start Learning Free</button>
+        </div>
+        <div class="cta-image-tab">
+          <img class="cta-image" src="photos/img2.jpg" alt="image of student">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <section>
+      <div class="footer">
+        <div class="footer-logo-text">
+          <img class="footer-logo" src="photos/logo.png" alt="logo" />
+          <P class="footer-text">Learn English Online With Real Teachers Anytime, Anywhere.</P>
+          <p class="copy">&copy; 2026 Online School. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li><a href="about">About Us</a></li>
+              <li><a href="careers">Careers</a></li>
+              <li><a href="contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Courses</h4>
+            <ul>
+              <li><a href="kids">Kids & Teens</a></li>
+              <li><a href="business">Business English</a></li>
+              <li><a href="adult">Adult Education</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Support</h4>
+            <ul>
+              <li><a href="contact">Contact</a></li>
+              <li><a href="help">Help Center</a></li>
+              <li><a href="faq">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Follow Us</h4>
+            <ul>
+              <li><a href="facebook"><i class="fa-brands fa-facebook"></i>Facebook</a></li>
+              <li><a href="twitter"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+              <li><a href="instagram"><i class="fa-brands fa-instagram"></i>Instagram</a></li>
+            </ul>
+          </div>
+        </div>
+    </section>
+  </footer>
+</body>
+
+</html>
