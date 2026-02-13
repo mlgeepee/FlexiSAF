@@ -1,0 +1,180 @@
+body {
+  margin: 3rem 0;
+}
+/* Blog Section */
+.blog-page {
+  padding: 6rem 70px;
+  background-color: var(--sixth-color);
+}
+
+/* Header */
+.blog-header {
+  max-width: 800px;
+  margin-bottom: 4rem;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.blog-header h3 {
+  font-size: min(48px, 8vw);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 0.8rem;
+  color: var(--fifth-color);
+}
+
+.blog-header p {
+  font-size: min(18px, 3vw);
+  color: var(--secondary-color);
+  max-width: 520px;
+}
+
+/* Form */
+.blog-form {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid */
+.blog-form form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+/* Labels */
+.blog-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+/* Inputs */
+.blog-form input,
+.blog-form textarea {
+  margin-top: 0.4rem;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: none;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  width: 100%;
+}
+
+.blog-form input:focus,
+.blog-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Input placeholder */
+.blog-form input::placeholder,
+.blog-form textarea::placeholder {
+  color: var(--secondary-color);
+}
+
+.blog-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+  padding: 10px;
+  accent-color: var(--fifth-color);
+}
+
+/* Textarea */
+.blog-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Span rows */
+.blog-form label:nth-child(1),
+.blog-form label:nth-child(2) {
+  grid-column: span 3;
+}
+
+.blog-form label:nth-last-child(3),
+.blog-form label:nth-last-child(2),
+.blog-form label:nth-last-child(1),
+.blog-form button {
+  grid-column: span 3;
+}
+
+/* Checkbox */
+.blog-form input[type="checkbox"] {
+  accent-color: var(--fifth-color);
+}
+
+/* Checkbox label */
+.blog-form label.checkbox {
+  display: block;
+  max-width: 100%;
+  grid-column: span 1;
+}
+
+/* Button */
+.blog-form button {
+  width: fit-content;
+  padding: 14px 32px;
+  border-radius: 999px;
+  border: none;
+  background-color: var(--primary-color);
+  color: var(--sixth-color);
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition:
+    opacity 0.12s ease,
+    transform 0.08s ease;
+}
+
+.blog-form button:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .blog-page {
+    padding: 4rem 30px;
+  }
+
+  .blog-form {
+    margin: 0 2rem;
+  }
+
+  .blog-form form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .blog-header {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-form form {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-header h3 {
+    font-size: 32px;
+  }
+  /* Span rows */
+  .blog-form label:nth-child(1),
+  .blog-form label:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .blog-form label:nth-last-child(3),
+  .blog-form label:nth-last-child(2),
+  .blog-form label:nth-last-child(1),
+  .blog-form button {
+    grid-column: span 1;
+  }
+}
