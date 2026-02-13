@@ -999,7 +999,11 @@ ul {
     align-items: center;
   }
   .pricing-container {
-    padding: 0 2rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .pricing .carding {
     width: 92%;
