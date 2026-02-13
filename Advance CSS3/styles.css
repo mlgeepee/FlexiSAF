@@ -1006,7 +1006,7 @@ ul {
     align-items: center;
   }
   .pricing .carding {
-    width: 92%;
+    width: 100%;
   }
   .hero-btn {
     display: block;
@@ -1097,6 +1097,10 @@ ul {
   }
   .body-fill {
     padding: 0px 20px;
+  }
+  .pricing-container {
+    padding: 0 1rem;
+    margin: 0 auto;
   }
 }
 
