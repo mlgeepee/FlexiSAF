@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hero">
+        <h1>DOM Manipulation</h1>
+        <p>
+          A simple, responsive demo for the Document Object Model, selectors,
+          events, and callback functions.
+        </p>
+      </header>
+
+      <section class="card" id="dom-model">
+        <h2>1. Document Object Model</h2>
+        <div class="controls">
+          <button id="add-node">Add DOM Node</button>
+          <button id="remove-node" class="secondary">Remove Last Node</button>
+        </div>
+        <ul id="dom-list" class="list">
+          <li>Node 1: Existing item</li>
+          <li>Node 2: Existing item</li>
+        </ul>
+      </section>
+
+      <section class="card" id="selectors-demo">
+        <h2>2. DOM Selectors</h2>
+        <p>
+          Use different selector methods to target elements by id, class, and
+          tag.
+        </p>
+        <div class="controls wrap">
+          <button id="select-id">Select by ID</button>
+          <button id="select-class" class="secondary">Select by Class</button>
+          <button id="select-tag" class="secondary">Select by Tag</button>
+          <button id="reset-selectors" class="ghost">Reset</button>
+        </div>
+        <div class="selector-box" id="target-id">
+          I am selected with getElementById
+        </div>
+        <div class="selector-box target-class">Class target A</div>
+        <div class="selector-box target-class">Class target B</div>
+        <p class="target-tag">I am selected with querySelectorAll('p')</p>
+      </section>
+
+      <section class="card" id="events-demo">
+        <h2>3. DOM Events</h2>
+        <p>Try click, input, and keyboard events in this section.</p>
+        <div class="controls wrap">
+          <button id="event-button">Click Me</button>
+          <input id="live-input" type="text" placeholder="Type something..." />
+        </div>
+        <p id="input-preview">Live input preview: <span>Nothing yet</span></p>
+        <p id="key-preview">Last key pressed: <span>None</span></p>
+        <p id="click-count">Button click count: <span>0</span></p>
+      </section>
+
+      <section class="card" id="callbacks-demo">
+        <h2>4. Callback Functions</h2>
+        <p>
+          A callback is a function passed to another function and run later.
+          Click to simulate an async task with a callback.
+        </p>
+        <button id="run-callback">Run Callback Demo</button>
+        <p id="callback-status">Status: Waiting...</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
