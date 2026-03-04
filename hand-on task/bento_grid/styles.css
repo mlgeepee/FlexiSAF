@@ -1,0 +1,383 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/DMSans-VariableFont_opsz,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("assets/fonts/DMSans-Italic-VariableFont_opsz,wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-style: italic;
+}
+
+:root {
+  --purple-100: hsl(254, 88%, 90%);
+  --purple-500: hsl(256, 67%, 59%);
+  --yellow-100: hsl(31, 66%, 93%);
+  --yellow-500: hsl(39, 100%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+  --page-bg: hsl(0, 0%, 96%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--page-bg);
+  font-family: "DM Sans", sans-serif;
+  color: var(--black);
+}
+
+.page {
+  width: min(1120px, 100% - 2rem);
+  margin-inline: auto;
+  padding-block: 2rem;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.75rem;
+  grid-template-areas:
+    "create social social schedule"
+    "write manage maintain schedule"
+    "write audience grow grow";
+}
+
+.card {
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+
+.card h1,
+.card h2 {
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.card--create {
+  grid-area: create;
+  background: var(--yellow-100);
+  display: grid;
+  align-content: center;
+  gap: 1.4rem;
+  padding-bottom: 70px;
+}
+
+.card--create h2 {
+  font-size: clamp(2rem, 1.4rem + 1.2vw, 2.45rem);
+}
+
+.card--create em {
+  color: var(--purple-500);
+  font-style: italic;
+}
+
+.card--create img {
+  width: 190px;
+}
+
+.card--social {
+  grid-area: social;
+  background: var(--purple-500);
+  color: var(--white);
+  text-align: center;
+  display: grid;
+  place-content: center;
+  gap: 1.2rem;
+  height: 90%;
+}
+
+.card--social h1 {
+  font-size: clamp(2.2rem, 1.8rem + 1.6vw, 4rem);
+  line-height: 0.92;
+  letter-spacing: -1px;
+}
+
+.card--social span {
+  color: var(--yellow-500);
+}
+
+.card--social em {
+  font-style: italic;
+}
+
+.card--social img {
+  width: min(195px, 70%);
+  margin-inline: auto;
+}
+
+.card--social p {
+  font-size: 1.1rem;
+}
+
+.card--schedule {
+  grid-area: schedule;
+  background: var(--purple-100);
+  display: grid;
+  /* grid-template-rows: auto 1fr auto; */
+  gap: 0.5rem;
+  height: 90%;
+}
+
+.card--schedule h2 {
+  font-size: clamp(1.75rem, 1.5rem + 0.8vw, 2.2rem);
+}
+
+.card--schedule img {
+  width: 375px;
+  max-width: none;
+}
+
+.card--schedule p {
+  font-size: 1.15rem;
+  line-height: 1.08;
+}
+
+.card--write {
+  grid-area: write;
+  background: var(--yellow-500);
+  display: grid;
+  align-content: space-between;
+  gap: 1rem;
+}
+
+.card--write h2 {
+  font-size: clamp(2rem, 1.55rem + 1vw, 2.7rem);
+}
+
+.card--write img {
+  width: 220px;
+  margin-top: auto;
+}
+
+.card--manage {
+  grid-area: manage;
+  background: var(--white);
+  display: grid;
+  gap: 1rem;
+  height: 90%;
+  margin-top: -35px;
+}
+
+.card--manage img {
+  width: 320px;
+  max-width: none;
+}
+
+.card--manage h2 {
+  font-size: clamp(2rem, 1.35rem + 1.2vw, 2.45rem);
+}
+
+.card--maintain {
+  position: relative;
+  overflow: hidden;
+  grid-area: maintain;
+  background: var(--yellow-500);
+  padding-bottom: 0;
+  display: grid;
+  gap: 1rem;
+  height: 90%;
+  margin-top: -35px;
+}
+
+.card--maintain h2 {
+  font-size: clamp(2rem, 1.35rem + 1.2vw, 2.45rem);
+}
+
+.card--maintain img {
+  width: 200px;
+  height: auto;
+}
+
+.card--audience {
+  grid-area: audience;
+  background: var(--white);
+  display: grid;
+  align-content: space-between;
+  gap: 0.9rem;
+  margin-top: -65px;
+}
+
+.card--audience h2 {
+  font-size: clamp(3rem, 2.2rem + 1vw, 4rem);
+}
+
+.card--audience p {
+  font-size: 1.15rem;
+}
+
+.card--audience img {
+  width: 175px;
+}
+
+.card--grow {
+  grid-area: grow;
+  background: var(--purple-500);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  margin-top: -65px;
+}
+
+.card--grow img {
+  width: 235px;
+}
+
+.card--grow h2 {
+  font-size: clamp(2rem, 1.35rem + 1.2vw, 2.45rem);
+}
+
+@media (max-width: 980px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "social social"
+      "manage maintain"
+      "schedule schedule"
+      "grow grow"
+      "audience create"
+      "write write";
+  }
+
+  .card--create {
+    padding-bottom: 1.5rem;
+  }
+
+  .card--social,
+  .card--schedule,
+  .card--manage,
+  .card--maintain {
+    height: auto;
+  }
+
+  .card--manage,
+  .card--maintain,
+  .card--audience,
+  .card--grow {
+    margin-top: 0;
+  }
+
+  .card--schedule {
+    gap: 1.5rem;
+  }
+
+  .card--schedule h2 br,
+  .card--schedule p br,
+  .card--manage h2 br {
+    display: none;
+  }
+
+  .card--schedule img,
+  .card--manage img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .card--grow {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .card--grow img {
+    margin-inline: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    width: min(375px, 100% - 2rem);
+    padding-block: 2rem;
+  }
+
+  .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    grid-template-areas:
+      "social"
+      "manage"
+      "maintain"
+      "schedule"
+      "grow"
+      "audience"
+      "create"
+      "write";
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .card--social {
+    padding-block: 2.5rem;
+    height: auto;
+  }
+
+  .card--social h1 {
+    font-size: 2.9rem;
+  }
+
+  .card--manage img {
+    width: 290px;
+  }
+
+  .card--maintain {
+    padding-bottom: 0;
+  }
+
+  .card--maintain img {
+    width: 220px;
+  }
+
+  .card--schedule {
+    text-align: center;
+  }
+
+  .card--schedule img {
+    width: 100%;
+    max-width: 295px;
+    margin-inline: auto;
+  }
+
+  .card--schedule p {
+    max-width: 260px;
+    margin-inline: auto;
+    line-height: 1.1;
+  }
+
+  .card--grow {
+    text-align: center;
+    gap: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .card--grow img {
+    width: 230px;
+  }
+
+  .card--grow h2 {
+    max-width: 12ch;
+    margin-inline: auto;
+  }
+
+  .card--create h2,
+  .card--write h2 {
+    font-size: 2.05rem;
+  }
+}
