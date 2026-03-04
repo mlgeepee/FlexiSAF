@@ -1,0 +1,137 @@
+:root {
+  --gold-500: hsl(31, 77%, 52%);
+  --cyan-800: hsl(184, 100%, 22%);
+  --green-950: hsl(179, 100%, 13%);
+  --white-75: hsla(0, 0%, 100%, 0.75);
+  --gray-100: hsl(0, 0%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--gray-100);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 0.9375rem;
+  display: grid;
+  place-items: center;
+  padding: 5.5rem 1.5rem;
+  overflow-x: hidden;
+}
+
+.page {
+  width: min(920px, calc(100vw - 3rem));
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.card {
+  padding: 3rem;
+  display: grid;
+  align-content: start;
+  min-height: 500px;
+}
+
+.card--sedans {
+  background: var(--gold-500);
+}
+
+.card--suvs {
+  background: var(--cyan-800);
+}
+
+.card--luxury {
+  background: var(--green-950);
+}
+
+.card img {
+  width: 64px;
+}
+
+.card h2 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  color: var(--gray-100);
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-top: 2.1rem;
+}
+
+.card p {
+  color: var(--white-75);
+  font-size: 0.94rem;
+  line-height: 1.67;
+  margin: 1.95rem 0rem 3.5rem 0rem;
+}
+
+.card__button {
+  justify-self: start;
+  margin-top: auto;
+  text-decoration: none;
+  background: var(--gray-100);
+  border: 2px solid var(--gray-100);
+  border-radius: 2rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  padding: 0.75rem 1.95rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.card--sedans .card__button {
+  color: var(--gold-500);
+}
+
+.card--suvs .card__button {
+  color: var(--cyan-800);
+}
+
+.card--luxury .card__button {
+  color: var(--green-950);
+}
+
+.card__button:hover,
+.card__button:focus-visible,
+.card__button:active {
+  background: transparent;
+  color: var(--gray-100);
+  outline: none;
+}
+
+@media (max-width: 860px) {
+  body {
+    place-items: start center;
+    padding: 5.5rem 1.5rem;
+  }
+
+  .page {
+    width: min(327px, calc(100vw - 3rem));
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: inherit;
+    padding: 3rem 3rem 3rem 3rem;
+  }
+
+  .card p {
+    margin: 1.75rem 0rem 0rem 0rem;
+  }
+
+  .card__button {
+    margin-top: 1.65rem;
+  }
+}
