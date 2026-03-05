@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product list with cart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="products-section" aria-labelledby="products-title">
+        <h1 id="products-title">Desserts</h1>
+        <div id="product-grid" class="product-grid"></div>
+      </section>
+
+      <aside class="cart" aria-live="polite">
+        <h2 id="cart-title">Your Cart (0)</h2>
+
+        <div id="empty-cart" class="empty-cart">
+          <img
+            src="./assets/images/illustration-empty-cart.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <p>Your added items will appear here</p>
+        </div>
+
+        <div id="cart-content" class="cart-content" hidden>
+          <ul id="cart-items" class="cart-items"></ul>
+          <div class="order-total-row">
+            <span>Order Total</span>
+            <strong id="order-total">$0.00</strong>
+          </div>
+          <div class="carbon-note">
+            <img
+              src="./assets/images/icon-carbon-neutral.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <p>This is a <strong>carbon-neutral</strong> delivery</p>
+          </div>
+          <button id="confirm-order-btn" type="button" class="confirm-order">
+            Confirm Order
+          </button>
+        </div>
+      </aside>
+    </main>
+
+    <div id="modal-backdrop" class="modal-backdrop" hidden>
+      <div
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-title"
+      >
+        <button
+          id="close-modal-btn"
+          class="modal-close"
+          type="button"
+          aria-label="Close confirmation"
+        >
+          <img
+            src="./assets/images/icon-remove-item.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </button>
+        <img
+          src="./assets/images/icon-order-confirmed.svg"
+          alt=""
+          aria-hidden="true"
+        />
+        <h2 id="modal-title">Order Confirmed</h2>
+        <p>We hope you enjoy your food!</p>
+
+        <div class="modal-order-box">
+          <ul id="modal-items" class="modal-items"></ul>
+          <div class="modal-total-row">
+            <span>Order Total</span>
+            <strong id="modal-total">$0.00</strong>
+          </div>
+        </div>
+
+        <button id="start-new-order-btn" type="button" class="confirm-order">
+          Start New Order
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
